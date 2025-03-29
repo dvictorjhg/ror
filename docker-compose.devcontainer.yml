@@ -1,0 +1,15 @@
+name: ror-devcontainer
+services:
+  ror:
+    container_name: ror-devcontainer
+    image: ${DOCKER_IMAGE}-devcontainer
+    userns_mode: "keep-id"
+    build:
+      dockerfile: docker/ror/ror.devcontainer.Dockerfile
+    env_file: .env
+    environment:
+      - BASE_PATH=/workspace
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/workspace

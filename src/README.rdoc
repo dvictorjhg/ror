@@ -1,0 +1,34 @@
+== Rails 4.2 Blog Tutorial
+
+This application is an implementation of the Ruby on Rails 4.2 Getting Started tutorial:
+https://guides.rubyonrails.org/v4.2/getting_started.html
+
+=== Application Details
+
+* Ruby version: 2.7.8
+* Rails version: 4.2.11.3
+* Database: SQLite3
+
+=== Features
+
+This simple blog application demonstrates the following Rails concepts:
+
+* MVC architecture
+* Basic CRUD operations
+* ActiveRecord associations
+* Form validations
+* HTTP authentication
+
+=== Getting Started
+
+This application is configured to run in a container environment.
+The Rails server starts automatically when the container starts.
+
+The application will be accessible at http://localhost:3000
+
+=== Container Environment
+
+This Rails 4.2 application runs within a modern container environment to make
+it easy to work with legacy code while maintaining isolation and consistency.
+
+For container-specific instructions, please see the root README.md file.

@@ -1,0 +1,48 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+  "name": "ror",
+
+  // Update the 'dockerComposeFile' list if you have more compose files or use different names.
+  // The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
+  "dockerComposeFile": "../docker-compose.devcontainer.yml",
+
+  // The 'service' property is the name of the service for the container that VS Code should
+  // use. Update this value and .devcontainer/docker-compose.yml to the real service name.
+  "service": "ror",
+
+  "workspaceFolder": "/workspace",
+
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Common
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
+        "mikestead.dotenv",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode-remote.remote-containers",
+        "ritwickdey.liveserver",
+        // Ruby
+        "castwide.solargraph",
+        "ninoseki.vscode-mogami",
+        "stripe.endsmart"
+      ],
+      "settings": {
+        "solargraph.commandPath": "/home/rails/.rbenv/shims/solargraph",
+        "solargraph.bundlerPath": "/home/rails/.rbenv/shims/bundle",
+        "remote.autoForwardPorts": false
+      }
+    }
+  },
+
+  // The portsAttributes and otherPortsAttributes properties allow you to map
+  // default port options for one or more manually or automatically forwarded ports.
+  // Ref: https://containers.dev/implementors/json_reference/#port-attributes
+  "portsAttributes": {
+    "3000": {
+      "label": "Rails",
+      "onAutoForward": "ignore"
+    }
+  }
+}

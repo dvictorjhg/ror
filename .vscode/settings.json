@@ -1,0 +1,16 @@
+{
+  "files.associations": {
+    "*.erb": "html"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "castwide.solargraph",
+    "editor.formatOnType": true
+  },
+  "editor.formatOnSave": true,
+  "solargraph.autoformat": true,
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true
+}

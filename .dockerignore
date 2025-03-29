@@ -1,0 +1,6 @@
+# Ruby on Rails
+src/tmp
+src/log/*.log
+
+# System
+.DS_Store

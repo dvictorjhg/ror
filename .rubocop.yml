@@ -1,0 +1,11 @@
+plugins:
+  - rubocop-rails
+
+AllCops:
+  Exclude:
+    - "**/*.erb"
+  TargetRubyVersion: 2.7
+  StyleGuideBaseURL: https://rubystyle.guide
+
+Rails:
+  StyleGuideBaseURL: https://rails.rubystyle.guide
