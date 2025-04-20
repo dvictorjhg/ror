@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="mb-0"><%= t('search.random') %></h2>
+      </div>
+      <div class="card-body">
+        <div class="alert alert-info mb-4">
+          <%= t('search.random_info') %>
+        </div>
+        
+        <%= form_for @search do |f| %>
+          <% if @search.errors.any? %>
+            <div class="alert alert-danger">
+              <h4><%= pluralize(@search.errors.count, "error") %> prohibited this search from being saved:</h4>
+              <ul>
+                <% @search.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          
+          <%= f.hidden_field :search_type %>
+          <%= f.hidden_field :query, value: '' %>
+          
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control', placeholder: t('search.email_placeholder') %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.submit t('search.submit'), class: 'btn btn-primary' %>
+            <%= link_to t('search.back'), root_path, class: 'btn btn-secondary ml-2' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>

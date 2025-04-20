@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  query: MyString
+  search_type: MyString
+  email: MyString
+
+two:
+  query: MyString
+  search_type: MyString
+  email: MyString

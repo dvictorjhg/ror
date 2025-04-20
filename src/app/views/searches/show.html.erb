@@ -1,0 +1,45 @@
+<div class="card mb-4">
+  <div class="card-header">
+    <h2><%= t('search.results_title') %></h2>
+    <p class="text-muted mb-0">
+      <% if @search.query.present? %>
+        <%= @search.search_type == "category" ? t('search.by_category') : t('search.by_text') %>: <strong><%= @search.query %></strong>
+      <% else %>
+        <%= t('search.random') %>
+      <% end %>
+    </p>
+  </div>
+  <div class="card-body">
+    <% if @facts.any? %>
+      <div class="facts-list">
+        <% @facts.each do |fact| %>
+          <div class="card fact-card mb-3">
+            <div class="card-body">
+              <p class="fact-value"><%= fact.value %></p>
+              <% if fact.categories_array.any? %>
+                <p class="text-muted">
+                  <strong><%= t('fact.categories') %>:</strong> <%= fact.categories_list %>
+                </p>
+              <% end %>
+              <a href="<%= fact.url %>" target="_blank" class="btn btn-sm btn-outline-primary">
+                <%= t('fact.view_online') %>
+              </a>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      
+      <div class="d-flex justify-content-center">
+        <%= paginate @facts %>
+      </div>
+    <% else %>
+      <div class="alert alert-warning">
+        <%= t('search.no_results') %>
+      </div>
+    <% end %>
+    
+    <div class="mt-4">
+      <%= link_to t('search.title'), new_search_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>

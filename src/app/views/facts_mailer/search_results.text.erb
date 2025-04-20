@@ -1,0 +1,18 @@
+<%= t('facts_mailer.search_results.title') %>
+
+<%= t('facts_mailer.search_results.intro', query: @search.query.present? ? @search.query : t('facts_mailer.random_search')) %>
+
+<% if @facts.any? %>
+  <% @facts.each do |fact| %>
+* <%= fact.value %>
+<% if fact.categories_array.any? %>
+<%= t('facts_mailer.categories') %>: <%= fact.categories_list %>
+<% end %>
+<%= t('facts_mailer.view_online') %>: <%= fact.url %>
+--------------------------------------
+  <% end %>
+<% else %>
+<%= t('facts_mailer.no_results') %>
+<% end %>
+
+<%= t('facts_mailer.footer') %>

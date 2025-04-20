@@ -1,0 +1,90 @@
+// Place all the styles related to the Searches controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.fact-card {
+  border-left: 4px solid #007bff;
+  
+  .fact-value {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+}
+
+.pagination {
+  .page {
+    margin: 0 3px;
+    
+    a, span {
+      padding: 6px 12px;
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+      display: inline-block;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      background-color: #f8f9fa;
+    }
+  }
+  
+  .page.current {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+  }
+  
+  .next, .prev, .first, .last {
+    margin: 0 3px;
+    
+    a {
+      padding: 6px 12px;
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+      display: inline-block;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      background-color: #f8f9fa;
+    }
+  }
+}
+
+.nav-tabs {
+  margin-bottom: 20px;
+}
+
+.search-errors {
+  margin-bottom: 20px;
+}
+
+.alert {
+  margin-bottom: 20px;
+}
+
+/* Chuck Norris theme colors */
+.navbar {
+  background-color: #882200 !important;
+}
+
+.btn-primary {
+  background-color: #882200;
+  border-color: #662200;
+  
+  &:hover {
+    background-color: #662200;
+    border-color: #441100;
+  }
+}
+
+.fact-card {
+  border-left-color: #882200;
+}
+
+.page.current {
+  background-color: #882200 !important;
+  border-color: #662200 !important;
+}

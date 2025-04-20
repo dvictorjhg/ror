@@ -21,3 +21,57 @@
 
 en:
   hello: "Hello world"
+  app_name: "Chuck Norris Facts Finder"
+  search:
+    title: "Search Chuck Norris Facts"
+    by_text: "Search by Text"
+    by_category: "Search by Category"
+    random: "Random Fact"
+    submit: "Search"
+    email_placeholder: "Your email address (optional)"
+    results_title: "Search Results"
+    no_results: "No facts found for your search."
+    email_sent: "Search results have been sent to your email."
+    save_success: "Your search has been saved."
+    start_search: "Start Search"
+    text_description: "Search for facts containing specific words or phrases."
+    category_description: "Find facts from a specific category."
+    random_description: "Get a completely random Chuck Norris fact."
+    text_query_label: "Enter text to search for"
+    category_query_label: "Select a category"
+    random_info: "Click the search button to get a random Chuck Norris fact."
+    back: "Back to options"
+  
+  fact:
+    categories: "Categories"
+    view_online: "View online"
+  
+  facts_mailer:
+    search_results:
+      subject: "Your Chuck Norris Facts Search Results"
+      title: "Chuck Norris Facts Search Results"
+      intro: "Here are the results for your search: %{query}"
+    categories: "Categories"
+    view_online: "View online"
+    no_results: "No facts were found for your search."
+    random_search: "random fact"
+    footer: "Thank you for using the Chuck Norris Facts Finder!"
+  
+  layouts:
+    application:
+      language: "Language"
+      english: "English"
+      spanish: "Spanish"
+  
+  helpers:
+    submit:
+      search:
+        create: "Search"
+  
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"

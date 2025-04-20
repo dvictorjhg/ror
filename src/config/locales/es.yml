@@ -1,0 +1,55 @@
+es:
+  app_name: "Buscador de Factos de Chuck Norris"
+  search:
+    title: "Buscar Factos de Chuck Norris"
+    by_text: "Buscar por Texto"
+    by_category: "Buscar por Categoría"
+    random: "Facto Aleatorio"
+    submit: "Buscar"
+    email_placeholder: "Tu dirección de correo (opcional)"
+    results_title: "Resultados de la Búsqueda"
+    no_results: "No se encontraron factos para tu búsqueda."
+    email_sent: "Los resultados de búsqueda han sido enviados a tu correo."
+    save_success: "Tu búsqueda ha sido guardada."
+    start_search: "Iniciar Búsqueda"
+    text_description: "Busca factos que contengan palabras o frases específicas."
+    category_description: "Encuentra factos de una categoría específica."
+    random_description: "Obtén un facto aleatorio de Chuck Norris."
+    text_query_label: "Introduce texto para buscar"
+    category_query_label: "Selecciona una categoría"
+    random_info: "Haz clic en el botón de búsqueda para obtener un facto aleatorio de Chuck Norris."
+    back: "Volver a opciones"
+  
+  fact:
+    categories: "Categorías"
+    view_online: "Ver en línea"
+  
+  facts_mailer:
+    search_results:
+      subject: "Resultados de tu Búsqueda de Factos de Chuck Norris"
+      title: "Resultados de Búsqueda de Factos de Chuck Norris"
+      intro: "Aquí están los resultados para tu búsqueda: %{query}"
+    categories: "Categorías"
+    view_online: "Ver en línea"
+    no_results: "No se encontraron factos para tu búsqueda."
+    random_search: "facto aleatorio"
+    footer: "¡Gracias por usar el Buscador de Factos de Chuck Norris!"
+  
+  layouts:
+    application:
+      language: "Idioma"
+      english: "Inglés"
+      spanish: "Español"
+  
+  helpers:
+    submit:
+      search:
+        create: "Buscar"
+  
+  views:
+    pagination:
+      first: "&laquo; Primera"
+      last: "Última &raquo;"
+      previous: "&lsaquo; Anterior"
+      next: "Siguiente &rsaquo;"
+      truncate: "&hellip;"

@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="mb-0"><%= t('search.by_text') %></h2>
+      </div>
+      <div class="card-body">
+        <%= form_for @search do |f| %>
+          <% if @search.errors.any? %>
+            <div class="alert alert-danger">
+              <h4><%= pluralize(@search.errors.count, "error") %> prohibited this search from being saved:</h4>
+              <ul>
+                <% @search.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          
+          <div class="form-group">
+            <%= f.label :query, t('search.text_query_label') %>
+            <%= f.text_field :query, class: "form-control", placeholder: "Chuck", autofocus: true %>
+            <%= f.hidden_field :search_type %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control', placeholder: t('search.email_placeholder') %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.submit t('search.submit'), class: 'btn btn-primary' %>
+            <%= link_to t('search.back'), root_path, class: 'btn btn-secondary ml-2' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<h1><%= t('facts_mailer.search_results.title') %></h1>
+
+<p><%= t('facts_mailer.search_results.intro', query: @search.query.present? ? @search.query : t('facts_mailer.random_search')) %></p>
+
+<div class="results">
+  <% if @facts.any? %>
+    <% @facts.each do |fact| %>
+      <div class="fact">
+        <p><%= fact.value %></p>
+        <% if fact.categories_array.any? %>
+          <p><strong><%= t('facts_mailer.categories') %>:</strong> <%= fact.categories_list %></p>
+        <% end %>
+        <p><a href="<%= fact.url %>" target="_blank"><%= t('facts_mailer.view_online') %></a></p>
+        <hr>
+      </div>
+    <% end %>
+  <% else %>
+    <p><%= t('facts_mailer.no_results') %></p>
+  <% end %>
+</div>
+
+<p><%= t('facts_mailer.footer') %></p>

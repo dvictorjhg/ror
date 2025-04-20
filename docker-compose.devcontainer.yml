@@ -1,8 +1,8 @@
-name: ror-devcontainer
+name: ror-chucknorris-facts-devcontainer
 services:
   ror:
-    container_name: ror-devcontainer
-    image: ${DOCKER_IMAGE}-devcontainer
+    container_name: ror-chucknorris-facts-devcontainer
+    image: ${DOCKER_IMAGE}:${DOCKER_IMAGE_TAG}-devcontainer
     userns_mode: "keep-id"
     build:
       dockerfile: docker/ror/ror.devcontainer.Dockerfile

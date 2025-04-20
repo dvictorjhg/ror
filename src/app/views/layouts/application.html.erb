@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-     <title>Blog</title>
-     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <title><%= t('app_name') %></title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+      <%= link_to t('app_name'), root_path, class: "navbar-brand" %>
+      <div class="ml-auto">
+        <span class="text-light mr-2"><%= t('layouts.application.language') %>:</span>
+        <%= link_to "EN", change_locale_path(locale: 'en'), class: "btn btn-sm #{I18n.locale.to_s == 'en' ? 'btn-light' : 'btn-outline-light'} mr-1" %>
+        <%= link_to "ES", change_locale_path(locale: 'es'), class: "btn btn-sm #{I18n.locale.to_s == 'es' ? 'btn-light' : 'btn-outline-light'}" %>
+      </div>
+    </div>
+  </nav>
 
-<%= yield %>
+  <div class="container">
+    <% if flash[:notice] %>
+      <div class="alert alert-success">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    
+    <% if flash[:alert] %>
+      <div class="alert alert-danger">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
 
+    <%= yield %>
+
+    <footer class="mt-5 mb-3 text-center text-muted">
+      <p>&copy; <%= Date.today.year %> Víctor José Holgado Gallegos</p>
+    </footer>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
